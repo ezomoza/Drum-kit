@@ -1,6 +1,8 @@
 window.addEventListener('keydown', function(e) {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
   const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
+  console.log(key);
+  console.log(audio);
   if(!audio) return // stop function
   audio.currentTime = 0; // rewind
   audio.play()
